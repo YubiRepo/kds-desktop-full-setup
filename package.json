@@ -1,0 +1,28 @@
+{
+  "name": "kds-full-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-checker": "npm install --prefix checker-desktop",
+    "install-kds": "npm install --prefix kds-desktop",
+    "build-checker": "npm run build --prefix checker-desktop",
+    "build-kds": "npm run build --prefix kds-desktop",
+    "start-checker": "cd checker-desktop serve -s ./dist ",
+    "start-kds": "cd kds-desktop serve -s ./dist ",
+    "checker": "npm run prod --prefix checker-desktop",
+    "kds": "npm run prod --prefix kds-desktop",
+    "install-deps": "concurrently \"npm install\" \"npm run install-checker\" \"npm run install-kds\"",
+    "build-all": "concurrently  \"npm run build-checker\" \"npm run build-kds\"",
+    "run-all": "concurrently  \"npm run checker\" \"npm run kds\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
