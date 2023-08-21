@@ -1,6 +1,9 @@
 [submodule "checker-desktop"]
 	path = checker-desktop
 	url = https://github.com/YubiRepo/checker-desktop.git
+	branch = master
+
 [submodule "kds-desktop"]
 	path = kds-desktop
 	url = https://github.com/YubiRepo/kds-desktop.git
+	branch = master
